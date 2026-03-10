@@ -1,0 +1,31 @@
+{
+  "hash": "224760f8",
+  "configHash": "fce53fdc",
+  "lockfileHash": "354a75d9",
+  "browserHash": "f93b2c86",
+  "optimized": {
+    "crypto-js": {
+      "src": "../../../../../node_modules/crypto-js/index.js",
+      "file": "crypto-js.js",
+      "fileHash": "6fde5823",
+      "needsInterop": true
+    },
+    "dayjs": {
+      "src": "../../../../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "6c7717dd",
+      "needsInterop": true
+    },
+    "lodash-es": {
+      "src": "../../../../../node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "2d8929e4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-TDUMLE5V": {
+      "file": "chunk-TDUMLE5V.js"
+    }
+  }
+}

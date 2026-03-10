@@ -1,0 +1,94 @@
+{
+	"pages": [{
+			"path": "pages/login/start",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/tool/tool",
+			"style": {
+				"navigationBarTitleText": "工具"
+			}
+		},
+		{
+			"path": "pages/mime/mime",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/tool/myTask/myTask",
+			"style": {
+				"navigationBarTitleText": "今日任务"
+			}
+		},
+		{
+			"path": "pages/tool/myTask/addTask",
+			"style": {
+				"navigationBarTitleText": "新增任务"
+			}
+		},
+		{
+			"path": "pages/tool/blood/blood",
+			"style": {
+				"navigationBarTitleText": "血压记录"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/tool/travel/travel",
+			"style": {
+				"navigationBarTitleText": "旅游路书"
+			}
+		},
+		{
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#f7f7f7",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"color": "#8f939c",
+		"selectedColor": "#2979ff",
+		"backgroundColor": "#f7f7f7",
+		"fontSize": "12px",
+		"iconWidth": "24px",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPath": "/static/tab/home.png",
+			"selectedIconPath": "/static/tab/home-selected.png"
+		}, {
+			"pagePath": "pages/tool/tool",
+			"text": "工具",
+			"iconPath": "/static/tab/tool.png",
+			"selectedIconPath": "/static/tab/tool-selected.png"
+		}, {
+			"pagePath": "pages/mime/mime",
+			"text": "我的",
+			"iconPath": "/static/tab/mime.png",
+			"selectedIconPath": "/static/tab/mime-selected.png"
+		}]
+	}
+}
