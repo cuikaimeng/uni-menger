@@ -77,8 +77,19 @@ provinceGeoMap.set('650000', p650000);
 provinceGeoMap.set('810000', p810000);
 provinceGeoMap.set('820000', p820000);
 provinceGeoMap.set('710000', p710000);
+
+const props = defineProps({
+	mapData: {
+		type: Array,
+		default: []
+	}
+})
+
+const emit = defineEmits(['change'])
+
 // 响应式数据定义
 const opts = reactive({
+	color: ['#1890FF'],
 	update: true,
 	fontSize: 10,
 	extra: {
@@ -99,27 +110,35 @@ onMounted(() => {
 
 // 初始化中国地图数据方法定义
 const drawChina = () => {
+	emit('change', { code: 'china' });
 	setTimeout(() => {
 		let series = china.features;
-		// for (let i = 0; i < series.length; i++) {
-		// 	series[i].value = Math.floor(Math.random() * 1000);
-		// 	series[i].fillOpacity = series[i].value / 1000;
-		// 	series[i].color = '#0D9FD8';
-		// }
+		for (let i = 0; i < series.length; i++) {
+			if (props.mapData.includes(String(series[i].properties.adcode))) {
+				// series[i].value = Math.floor(Math.random() * 1000);
+				// series[i].fillOpacity = series[i].value / 1000;
+				series[i].color = '#0D9FD8';
+			} else {
+				series[i].color = '#EEEEEE';
+			}
+		}
 		chartData.series = series;
 	}, 100);
 };
 // 初始化省份地图数据
 const drawProvince = (properties) => {
 	console.log('drawProvince', properties);
+	emit('change', { code: properties.adcode.toString() });
 	if (properties.adcode && provinceGeoMap.has(properties.adcode.toString())) {
 		setTimeout(() => {
 			let series = provinceGeoMap.get(properties.adcode.toString()).features;
-			// for (let i = 0; i < series.length; i++) {
-			// 	series[i].value = Math.floor(Math.random() * 1000);
-			// 	series[i].fillOpacity = series[i].value / 1000;
-			// 	series[i].color = '#0D9FD8';
-			// }
+			for (let i = 0; i < series.length; i++) {
+				if (props.mapData.includes(String(series[i].properties.adcode))) {
+					series[i].color = '#0D9FD8';
+				} else {
+					series[i].color = '#EEEEEE';
+				}
+			}
 			chartData.series = series;
 		}, 100);
 	}

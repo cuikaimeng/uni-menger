@@ -9,7 +9,6 @@
 			></image>
 		</view>
 		<view class="book-title">{{ bookData.travel_title }}</view>
-		<!-- <view class="book-title">{{ bookIndex }}</view> -->
 		<view class="book-foot">
 			<view class="book-attraction">{{ travelCityName + '•' + bookData.travel_attraction }}</view>
 			<view class="book-user">
