@@ -2,22 +2,47 @@
 	"name": "uni-menger",
 	"version": "1.0.0",
 	"description": "",
-	"main": "main.js",
+	"private": true,
 	"type": "module",
-	"scripts": {},
+	"scripts": {
+		"dev:h5": "SASS_SILENCE_DEPRECATIONS=all SASS_QUIET_DEPS=true uni",
+		"build:h5": "SASS_SILENCE_DEPRECATIONS=all SASS_QUIET_DEPS=true uni build",
+		"dev:mp-weixin": "SASS_SILENCE_DEPRECATIONS=all SASS_QUIET_DEPS=true uni -p mp-weixin",
+		"build:mp-weixin": "SASS_SILENCE_DEPRECATIONS=all SASS_QUIET_DEPS=true uni build -p mp-weixin",
+		"publish:mp-weixin": "pnpm run build:mp-weixin && node scripts/mp-weixin-upload.mjs",
+		"dev:mp-alipay": "uni -p mp-alipay",
+		"build:mp-alipay": "uni build -p mp-alipay",
+		"dev:app": "uni -p app",
+		"build:app": "uni build -p app"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"packageManager": "pnpm@10.12.4",
 	"devDependencies": {
+		"@dcloudio/types": "3.4.28",
+		"@dcloudio/vite-plugin-uni": "3.0.0-5000420260317001",
+		"miniprogram-ci": "latest",
+		"sass": "latest",
+		"vite": "5.2.8"
+	},
+	"dependencies": {
 		"@amap/amap-jsapi-loader": "^1.0.1",
+		"@dcloudio/uni-app": "3.0.0-5000420260317001",
+		"@dcloudio/uni-app-plus": "3.0.0-5000420260317001",
+		"@dcloudio/uni-components": "3.0.0-5000420260317001",
+		"@dcloudio/uni-h5": "3.0.0-5000420260317001",
+		"@dcloudio/uni-mp-alipay": "3.0.0-5000420260317001",
+		"@dcloudio/uni-mp-weixin": "3.0.0-5000420260317001",
+		"@dcloudio/uni-uts-v1": "3.0.0-5000420260317001",
 		"crypto-js": "^4.2.0",
 		"dayjs": "^1.11.13",
 		"echarts": "^6.0.0",
 		"lodash-es": "^4.17.21",
-		"pinia": "^3.0.3"
+		"pinia": "2.1.7",
+		"vue": "3.4.21"
 	},
-	"dependencies": {
-		"pnpm": "^10.31.0"
+	"pnpm": {
+		"onlyBuiltDependencies": ["@parcel/watcher", "@swc/core", "core-js", "core-js-pure", "esbuild", "less", "protobufjs", "vue-demi"]
 	}
 }

@@ -11,10 +11,24 @@
 
 ## 项目启动
 
+- 启用 pnpm（未安装 pnpm 时）
+  corepack enable && corepack prepare pnpm@10.12.4 --activate
 - 安装依赖
   pnpm install
+- 源码目录
+  src/
 - 运行项目（H5）
   pnpm run dev:h5
+- 编译（H5）
+  pnpm run build:h5
+- 运行项目（微信小程序）
+  pnpm run dev:mp-weixin
+- 编译（微信小程序）
+  pnpm run build:mp-weixin
+- 发布（微信小程序，需配置环境变量）
+  pnpm run publish:mp-weixin
+- 发布环境变量参考
+  .env.example
 
 ## 核心第三方插件
 
