@@ -1,7 +1,5 @@
 // 旅游路书相关接口
-import {
-	http
-} from "@/utils/request.js";
+import { http } from "@/utils/request.js";
 
 const API = {
 	travel_list: "/travel/list", // 路书列表

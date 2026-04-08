@@ -1,7 +1,5 @@
 // 登录相关接口
-import {
-	http
-} from "@/utils/request.js";
+import { http } from "@/utils/request.js";
 
 const API = {
 	user_info: "/user/info", // 用户信息

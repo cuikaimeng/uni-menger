@@ -1,7 +1,5 @@
 // 我的任务相关接口
-import {
-	http
-} from "@/utils/request.js";
+import { http } from "@/utils/request.js";
 
 const API = {
 	task_list: "/myTask/list", // 任务列表

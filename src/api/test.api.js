@@ -1,7 +1,5 @@
 // 血压数据接口
-import {
-	http
-} from "@/utils/request.js";
+import { http } from "@/utils/request.js";
 
 const API = {
 	test_add: "/test/add",

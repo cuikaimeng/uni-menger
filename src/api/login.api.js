@@ -1,7 +1,5 @@
 // 登录相关接口
-import {
-	http
-} from "@/utils/request.js";
+import { http } from "@/utils/request.js";
 
 const API = {
 	login: "/login", // 登录
